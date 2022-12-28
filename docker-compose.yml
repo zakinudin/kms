@@ -4,7 +4,7 @@ services:
   os:
    container_name: ubuntu-os
    image: ubuntu:20.04
-   
+
   webservice:
     container_name: kms-7500
     image: kms-7500:1.0
@@ -21,4 +21,4 @@ services:
       - pdsi
     
 networks:
-  - pdsi:
+  pdsi:
