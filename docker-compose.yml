@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
   webservice:
-    image: kms:1.0
-    container_name: kms
+    image: kms-7500:1.0
+    container_name: kms-7500
     restart: always
     # volumes:
     #   - "./api-kms-nohsm.jar:/api-kms-nohsm.jar"
