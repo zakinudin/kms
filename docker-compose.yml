@@ -6,3 +6,10 @@ services:
     image: ubuntu:20.04
     restart: on-failure
     command: ["sleep","infinity"]
+    volumes:
+      - /opt/nfast:/opt/nfast:ro
+      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
+      - /opt/nfast/sockets:/opt/nfast/sockets
+
+volumes:
+  pdsi-volume:
