@@ -4,12 +4,3 @@ services:
   os:
   #  container_name: ubuntu-os
     image: ubuntu:20.04
-    networks:
-    - pdsi
-    volumes:
-      - .:/home/kms
-      - /opt/nfast:/opt/nfast:ro
-      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
-      - /opt/nfast/sockets:/opt/nfast/sockets
-networks:
-  pdsi:
