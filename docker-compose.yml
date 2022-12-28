@@ -2,5 +2,10 @@ version: '3.7'
 
 services:
   os:
-   container_name: pdsi-os
+   container_name: ubuntu-os
    image: ubuntu:20.04
+   networks:
+    - pdsi
+
+networks:
+  pdsi:
