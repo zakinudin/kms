@@ -3,9 +3,13 @@ version: '3.7'
 services:
   os:
   #  container_name: ubuntu-os
-   image: ubuntu:20.04
-   networks:
+    image: ubuntu:20.04
+    networks:
     - pdsi
+    volumes:
+      - /opt/nfast:/opt/nfast:ro
+      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
+      - /opt/nfast/sockets:/opt/nfast/sockets
 
 networks:
   pdsi:
