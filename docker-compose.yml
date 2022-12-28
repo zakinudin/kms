@@ -12,7 +12,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    command: ["java", "-jar", "/kms-7500.jar"]
+    command: ["java", "-jar", "/kms7500.jar"]
     # networks:
     #   - pdsi
     
