@@ -1,6 +1,8 @@
 version: '3.7'
 
 services:
-  os:
-    container_name: ubuntu-os
+  ubuntu:
+    container_name: ubuntu
     image: ubuntu:20.04
+    restart: on-failure
+    command: ["sleep","infinity"]
