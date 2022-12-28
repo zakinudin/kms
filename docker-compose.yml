@@ -20,5 +20,5 @@ services:
   #   networks:
   #     - pdsi
     
-networks:
-  pdsi:
+# networks:
+#   pdsi:
