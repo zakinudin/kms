@@ -4,21 +4,3 @@ services:
   os:
    container_name: pdsi-os
    image: ubuntu:20.04
-
-  # webservice:
-  #   container_name: kms-7500
-  #   image: kms-7500:1.0
-  #   restart: always
-  #   ports:
-  #     - "7500:7500"
-  #   volumes:
-  #     - .:/home/kms
-  #   build:
-  #     context: ./
-  #     dockerfile: Dockerfile
-  #   command: ["java", "-jar", "/kms7500.jar"]
-  #   networks:
-  #     - pdsi
-    
-# networks:
-#   pdsi:
