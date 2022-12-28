@@ -1,6 +1,10 @@
 version: '3.7'
 
 services:
+  os:
+   container_name: ubuntu-os
+   image: ubuntu:20.04
+   
   webservice:
     container_name: kms-7500
     image: kms-7500:1.0
@@ -13,8 +17,8 @@ services:
       context: ./
       dockerfile: Dockerfile
     command: ["java", "-jar", "/kms7500.jar"]
-    # networks:
-    #   - pdsi
+    networks:
+      - pdsi
     
-# networks:
-#   - pdsi:
+networks:
+  - pdsi:
