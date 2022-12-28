@@ -11,6 +11,6 @@ services:
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
-      command: ["java", "-jar", "/kms7500.jar"]
+    command: ["java", "-jar", "/kms7500.jar"]
 networks:
   pdsi:
