@@ -2,16 +2,13 @@ version: '3.7'
 
 services:
   webservice:
-    image: kms-7500:1.0
     container_name: kms-7500
+    image: kms-7500:1.0
     restart: always
-    # volumes:
-    #   - "./api-kms-nohsm.jar:/api-kms-nohsm.jar"
     ports:
       - "7500:7500"
     volumes:
       - .:/home/kms
-    # working_dir: ./
     build:
       context: ./
       dockerfile: Dockerfile
