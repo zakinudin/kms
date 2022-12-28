@@ -1,19 +1,21 @@
-version: '3.8'
+version: '3.7'
 
 services:
   webservice:
-    image: api-no-hsm
-    container_name: api-no-kms
+    image: kms:1.0
+    container_name: kms
     restart: always
-    volumes:
-      - "./api-no-kms.jar:/api-no-kms.jar"
+    # volumes:
+    #   - "./api-kms-nohsm.jar:/api-kms-nohsm.jar"
     ports:
-      - "4001:7000"
+      - "7500:7500"
+    volumes:
+      - .:/home/kms
     # working_dir: ./
     build:
       context: ./
       dockerfile: Dockerfile
-    command: ["java", "-jar", "/api-no-kms.jar"]
+    command: ["java", "-jar", "/kms-7500.jar"]
     # networks:
     #   - pdsi
     
