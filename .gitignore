@@ -1,3 +1,3 @@
-lib
-storage
-tte-noshm.jar
+/lib
+/storage
+tte-nohsm.jar
