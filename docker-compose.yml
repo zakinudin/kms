@@ -1,18 +1,23 @@
 version: '3.7'
 
 services:
-  ubuntu:
-    container_name: ttd
-    image: ttd:1.0
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    # restart: on-failure
-    # command: ["sleep","infinity"]
+  webservice:
+    image: api-kms-nohsm:1.0
+    container_name: api-kms-nohsm
+    restart: always
+    ports:
+      - "7500:7500"
+    working_dir: /home/kms
     volumes:
+      - .:/home/kms
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
+    # working_dir: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: ["java", "-jar", "/kms7500.jar"]    
     networks:
       - pdsi
     
