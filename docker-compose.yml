@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
   webservice:
-    image: api-kms-nohsm:1.0
-    container_name: api-kms-nohsm
+    image: tte:1.0
+    container_name: tte
     restart: always
     ports:
       - "7500:7500"
