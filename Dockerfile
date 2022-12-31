@@ -10,3 +10,5 @@ COPY lib/local_policy.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/security
 COPY lib/US_export_policy.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/security
 COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/ext
 #COPY storage/config/tte.properties /storage/config
+
+USER root
