@@ -2,12 +2,13 @@ version: '3.7'
 
 services:
   ubuntu:
-    container_name: ubuntu-os
+    container_name: tte1
+    image: tte:1.0
     build:
       context: ./
       dockerfile: Dockerfile
-    restart: on-failure
-    command: ["sleep","infinity"]
+    # restart: on-failure
+    # command: ["sleep","infinity"]
     volumes:
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
