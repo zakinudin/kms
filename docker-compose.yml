@@ -4,6 +4,8 @@ services:
   webservice:
     image: tte:1.0
     container_name: tte
+    stdin_open: true
+    tty: true
     restart: always
     ports:
       - "7500:7500"
