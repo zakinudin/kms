@@ -2,8 +2,7 @@ version: '3.7'
 
 services:
   ubuntu:
-    container_name: tte1
-    image: tte:1.0
+    container_name: tte2
     build:
       context: ./
       dockerfile: Dockerfile
