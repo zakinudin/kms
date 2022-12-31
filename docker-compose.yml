@@ -2,14 +2,23 @@ version: '3.7'
 
 services:
   ubuntu:
-    container_name: ubuntu
-    image: ubuntu:20.04
+    container_name: ubuntu-os
+    build:
+      context: ./
+      dockerfile: Dockerfile
     restart: on-failure
     command: ["sleep","infinity"]
-    volumes:
-      - /opt/nfast:/opt/nfast:ro
-      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
-      - /opt/nfast/sockets:/opt/nfast/sockets
+    # volumes:
+      # - /opt/nfast:/opt/nfast:ro
+      # - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
+      # - /opt/nfast/sockets:/opt/nfast/sockets
+    networks:
+      - pdsi
 
-volumes:
-  pdsi-volume:
+  
+    
+networks:
+  pdsi:
+
+# volumes:
+#   pdsi-volume:
