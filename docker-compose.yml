@@ -2,7 +2,8 @@ version: '3.7'
 
 services:
   ubuntu:
-    container_name: tte2
+    container_name: ttd
+    image: ttd:1.0
     build:
       context: ./
       dockerfile: Dockerfile
@@ -14,8 +15,6 @@ services:
       - /opt/nfast/sockets:/opt/nfast/sockets
     networks:
       - pdsi
-
-  
     
 networks:
   pdsi:
