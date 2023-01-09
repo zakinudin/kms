@@ -14,4 +14,4 @@ RUN apt update && apt install -y zip nano
 # COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/bcprov-jdk15on-165.jar
 # COPY storage/config/tte.properties /storage/config
 
-# CMD ["java", "-jar", "/kms7500.jar"]
+CMD ["java", "-jar", "/kms7500.jar"]
