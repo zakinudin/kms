@@ -1,6 +1,11 @@
 # FROM ubuntu:20.04
 FROM openjdk:8-jre
 
+RUN apt update \
+        && apt install -y \
+            zip \
+            nano
+
 # RUN cd /usr/lib/jvm/java-1.8-openjdk/jre/lib/security && \
 # 	echo 'security.provider.11=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/java.security && \
 # 	echo 'security.provider.12=com.ncipher.provider.km.nCipherKM' >> /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/java.security
