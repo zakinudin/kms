@@ -10,7 +10,7 @@ services:
     ports:
       - "7500:7500"
     volumes:
-      # - /usr/lib/jvm/java-1.8-openjdk/jre/lib/security:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security
+      - /usr/lib:/usr/lib
       # - /usr/lib/jvm/java-1.8-openjdk/jre/lib/ext:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
