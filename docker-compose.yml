@@ -9,13 +9,10 @@ services:
     restart: always
     ports:
       - "7500:7500"
-    working_dir: /home/kms
     volumes:
-      - .:/home/kms
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
-    # working_dir: ./
     build:
       context: ./
       dockerfile: Dockerfile
