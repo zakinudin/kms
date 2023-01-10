@@ -6,7 +6,7 @@ services:
     container_name: tte
     stdin_open: true
     tty: true
-    network_mode: "host"
+    # network_mode: "host"
     restart: always
     ports:
       - "7500:7501"
@@ -21,11 +21,11 @@ services:
       context: ./
       dockerfile: Dockerfile
     # command: ["java", "-jar", "/kms7500.jar"]    
-    # networks:
-    #   - pdsi
+    networks:
+      - pdsi
     
-# networks:
-#   pdsi:
+networks:
+  pdsi:
 
 # volumes:
 #   pdsi-volume:
