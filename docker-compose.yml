@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   webservice:
-    image: tte:1.0
+    image: openjdk:8-jre
     container_name: tte
     stdin_open: true
     tty: true
@@ -18,9 +18,9 @@ services:
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile
     command: ["java", "-jar", "/kms7500.jar"]    
     networks:
       - pdsi
