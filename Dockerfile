@@ -16,4 +16,4 @@ COPY . /app
 # COPY storage/config/tte.properties /storage/config
 
 # CMD ["java", "-jar", "/kms7500.jar"]
-ENTRYPOINT ["java", "-jar", "/kms7500.jar"]
+# ENTRYPOINT ["java", "-jar", "/kms7500.jar"]
