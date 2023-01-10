@@ -9,7 +9,7 @@ RUN apt update && apt install -y zip nano
 
 # copy the packaged jar file into our docker image
 # COPY kms7500.jar /kms7500.jar
-COPY . /app
+COPY . /home/Project/kms
 # COPY lib/local_policy.jar /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/local_policy.jar
 # COPY lib/US_export_policy.jar /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/US_export_policy.jar
 # COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/bcprov-jdk15on-165.jar
