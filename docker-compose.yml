@@ -13,7 +13,7 @@ services:
     working_dir: /home/Project/kms
     volumes:
       - .:/home/Project/kms
-      - /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib
+      - /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib:/usr/lib/jvm/java-1.8-openjdk/jre/lib
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
