@@ -6,6 +6,7 @@ services:
     container_name: tte
     stdin_open: true
     tty: true
+    network_mode: "host"
     restart: always
     ports:
       - "7500:7501"
