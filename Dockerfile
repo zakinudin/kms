@@ -1,6 +1,4 @@
-FROM openjdk:8-jdk-alpine
-
-RUN apk update && apk add bash
+FROM openjdk:8-jre-alpine3.9
 
 RUN cd /usr/lib/jvm/java-1.8-openjdk/jre/lib/security && \
 	echo 'security.provider.11=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/java.security && \
@@ -14,4 +12,3 @@ COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/ext
 #COPY storage/config/tte.properties /storage/config
 
 # CMD ["java", "-jar", "/kms7500.jar"]
-CMD /bin/bash
