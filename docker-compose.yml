@@ -21,7 +21,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    command: ["java", "-jar", "/provider.jar"]    
+    # command: ["java", "-jar", "/provider.jar"]    
     networks:
       - pdsi
     
