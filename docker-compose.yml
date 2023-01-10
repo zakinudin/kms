@@ -21,10 +21,10 @@ services:
       dockerfile: Dockerfile
     # command: ["java", "-jar", "/kms7500.jar"]    
     networks:
-      - pdsi
+      - host
     
 networks:
-  pdsi:
+  host:
     name: host
     external: true
 
