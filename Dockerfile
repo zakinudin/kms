@@ -1,5 +1,15 @@
 FROM openjdk:8-jre
 
+# Install OpenJDK-11
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jre && \
+    apt-get clean;
+
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64/
+
+RUN export JAVA_HOME
+CMD ["java", "-version"]
+
 # RUN cd /usr/lib/jvm/java-1.8-openjdk/jre/lib/security && \
 # 	echo 'security.provider.11=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/java.security && \
 # 	echo 'security.provider.12=com.ncipher.provider.km.nCipherKM' >> /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/java.security
