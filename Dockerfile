@@ -1,8 +1,8 @@
-FROM openjdk:8-jre
+FROM openjdk:8-jdk
 
 # Install OpenJDK-11
 RUN apt-get update && \
-    apt-get install -y openjdk-8-jre && \
+    apt-get install -y openjdk-8-jdk && \
     apt-get clean;
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
