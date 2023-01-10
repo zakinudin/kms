@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   webservice:
-    image: tte:1.0
+    image: tte:1.1
     container_name: tte-ubuntu
     stdin_open: true
     tty: true
