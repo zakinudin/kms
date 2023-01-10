@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   webservice:
-    image: openjdk:8-jre
+    image: tte:1.0
     container_name: tte
     stdin_open: true
     tty: true
@@ -11,16 +11,16 @@ services:
       - "7500:7500"
     working_dir: /home/Project/kms
     volumes:
-      - .:/home/Project/kms
+      # - .:/home/Project/kms
       - "/usr/lib:/usr/lib"
       # - /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/java.security:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/java.security
       # - /usr/lib/jvm/java-1.8-openjdk/jre/lib/ext:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
-    # build:
-    #   context: ./
-    #   dockerfile: Dockerfile
+    build:
+      context: ./
+      dockerfile: Dockerfile
     # command: ["java", "-jar", "/kms7500.jar"]    
     networks:
       - pdsi
