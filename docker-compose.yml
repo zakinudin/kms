@@ -9,9 +9,9 @@ services:
     restart: always
     ports:
       - "7500:7500"
-    working_dir: /home/kms
+    working_dir: /home/Project/kms
     volumes:
-      - .:/home/kms
+      - .:/home/Project/kms
       - /opt/nfast:/opt/nfast:ro
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets:/opt/nfast/sockets
