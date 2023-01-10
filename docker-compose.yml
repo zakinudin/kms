@@ -8,7 +8,7 @@ services:
     tty: true
     restart: always
     ports:
-      - "7500:7500"
+      - "8899:8899"
     working_dir: /home/Project/kms
     volumes:
       - .:/home/Project/kms
@@ -21,7 +21,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    # command: ["java", "-jar", "/kms7500.jar"]    
+    command: ["java", "-jar", "/provider.jar"]    
     networks:
       - pdsi
     
