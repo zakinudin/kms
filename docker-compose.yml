@@ -9,6 +9,7 @@ services:
     restart: always
     ports:
       - "7500:7500"
+    working_dir: /home/kms
     volumes:
       - "/usr/lib:/usr/lib"
       # - /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/java.security:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/java.security
