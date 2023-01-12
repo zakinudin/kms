@@ -10,7 +10,7 @@ services:
     restart: always
     ports:
       - "7502:7501"
-    working_dir: /home/Project/ubuntu
+    # working_dir: /home/Project/ubuntu
     volumes:
       - .:/home/Project/ubuntu
       - /opt/nfast:/opt/nfast:ro
