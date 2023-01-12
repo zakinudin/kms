@@ -12,6 +12,6 @@ COPY lib/local_policy.jar /usr/local/openjdk-8/jre/lib/security
 COPY lib/US_export_policy.jar /usr/local/openjdk-8/jre/lib/security
 COPY lib/bcprov-jdk15on-165.jar /usr/local/openjdk-8/jre/lib/security
 COPY lib/nCipherKM.jar /usr/local/openjdk-8/jre/lib/security
-COPY storage/config/tte.properties /storage/config
+# COPY storage/config/tte.properties /storage/config
 
 # CMD ["java", "-jar", "/kms7500.jar"]
