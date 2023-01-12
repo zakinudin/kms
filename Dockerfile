@@ -2,7 +2,7 @@ FROM openjdk:8-jdk
 
 RUN apt update && apt install nano
 
-RUN cd /usr/lib/jvm/java-1.8-openjdk/jre/lib/security && \
+RUN cd /usr/local/openjdk-8/jre/lib/security && \
 	echo 'security.provider.11=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/local/openjdk-8/jre/lib/security/java.security && \
 	echo 'security.provider.12=com.ncipher.provider.km.nCipherKM' >> /usr/local/openjdk-8/jre/lib/security/java.security
 
