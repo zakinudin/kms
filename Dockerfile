@@ -6,7 +6,7 @@ RUN cd /usr/local/openjdk-8/jre/lib/security && \
 	echo 'security.provider.10=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/local/openjdk-8/jre/lib/security/java.security && \
 	echo 'security.provider.11=com.ncipher.provider.km.nCipherKM' >> /usr/local/openjdk-8/jre/lib/security/java.security
 
-RUN cd /opt/nfast/bin && /opt/nfast/sbin/init.d-ncipher restart
+# RUN cd /opt/nfast/bin && /opt/nfast/sbin/init.d-ncipher restart
 
 # copy the packaged jar file into our docker image
 COPY kms7500.jar /kms7500.jar
