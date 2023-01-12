@@ -14,4 +14,4 @@ COPY lib/bcprov-jdk15on-165.jar /usr/local/openjdk-8/jre/lib/ext
 COPY lib/nCipherKM.jar /usr/local/openjdk-8/jre/lib/ext
 # COPY storage/config/tte.properties /storage/config
 
-# CMD ["java", "-jar", "/kms7500.jar"]
+CMD ["java", "-jar", "/kms7500.jar"]
