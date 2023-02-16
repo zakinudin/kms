@@ -13,7 +13,7 @@ services:
     working_dir: /home/Project/ubuntu
     volumes:
       - .:/home/Project/ubuntu
-      - /opt/nfast:/opt/nfast:ro
+      - /opt/nfast:/opt/nfast:rw
       - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets.hwsp:/opt/nfast/sockets
     # working_dir: ./
