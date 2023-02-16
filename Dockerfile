@@ -14,7 +14,7 @@ COPY lib/local_policy.jar /usr/local/openjdk-8/jre/lib/security
 COPY lib/US_export_policy.jar /usr/local/openjdk-8/jre/lib/security
 COPY lib/bcprov-jdk15on-165.jar /usr/local/openjdk-8/jre/lib/ext
 COPY lib/nCipherKM.jar /usr/local/openjdk-8/jre/lib/ext
-COPY lib/security_world /home/Project/lib/security_world
+COPY security_world /home/Project/ubuntu
 # COPY storage/config/tte.properties /storage/config
 
 # CMD ["/opt/nfast/sbin/init.d-ncipher", "-D", "FOREGROUND"]
