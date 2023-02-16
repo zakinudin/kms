@@ -2,14 +2,14 @@ version: '3.7'
 
 services:
   webservice:
-    image: tte:1.1
-    container_name: tte-ubuntu
+    image: tte:1.2
+    container_name: tte-feb
     stdin_open: true
     tty: true
     # network_mode: "host"
     restart: always
     ports:
-      - "7502:7501"
+      - "17502:7501"
     working_dir: /home/Project/ubuntu
     volumes:
       - .:/home/Project/ubuntu
@@ -22,10 +22,10 @@ services:
       dockerfile: Dockerfile
     # command: ["java", "-jar", "/kms7500.jar"]    
     networks:
-      - pdsi-ubuntu
+      - pdsi-tte
     
 networks:
-  pdsi-ubuntu:
+  pdsi-tte:
 
 # volumes:
 #   pdsi-volume:
