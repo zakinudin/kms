@@ -2,20 +2,22 @@ version: '3.7'
 
 services:
   webservice:
-    image: tte:1.2
-    container_name: tte-feb
+    image: tte:1.3
+    container_name: tte-ubu1
     stdin_open: true
     tty: true
     # network_mode: "host"
     restart: always
     ports:
-      - "17502:7501"
+      - "1502:7501"
     working_dir: /home/Project/ubuntu
     volumes:
       - .:/home/Project/ubuntu
-      - /opt/nfast:/opt/nfast:rw
-      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
+      - /opt/nfast/kmdata:/opt/nfast/kmdata
       - /opt/nfast/sockets.hwsp:/opt/nfast/sockets
+      # - /opt/nfast:/opt/nfast:rw
+      # - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
+      # - /opt/nfast/sockets.hwsp:/opt/nfast/sockets
     # working_dir: ./
     build:
       context: ./
