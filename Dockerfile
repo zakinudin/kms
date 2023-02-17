@@ -10,10 +10,10 @@ RUN apt update && apt install nano unzip
 
 # copy the packaged jar file into our docker image
 COPY kms7500.jar /kms7500.jar
-COPY lib/local_policy.jar /usr/local/openjdk-8/jre/lib/security
-COPY lib/US_export_policy.jar /usr/local/openjdk-8/jre/lib/security
-COPY lib/bcprov-jdk15on-165.jar /usr/local/openjdk-8/jre/lib/ext
-COPY lib/nCipherKM.jar /usr/local/openjdk-8/jre/lib/ext
+# COPY lib/local_policy.jar /usr/local/openjdk-8/jre/lib/security
+# COPY lib/US_export_policy.jar /usr/local/openjdk-8/jre/lib/security
+# COPY lib/bcprov-jdk15on-165.jar /usr/local/openjdk-8/jre/lib/ext
+# COPY lib/nCipherKM.jar /usr/local/openjdk-8/jre/lib/ext
 COPY security_world /home/Project/ubuntu
 # COPY storage/config/tte.properties /storage/config
 
