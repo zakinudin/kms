@@ -9,7 +9,7 @@ COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext
 
 RUN pwd
 
-# RUN security_world_12_71/install-sw.sh
+RUN security_world_12_71/install-sw.sh; exit 0
 
 RUN apt-get update && \
     apt-get install -y nano && \
