@@ -9,7 +9,7 @@ WORKDIR /home/Project/ubuntu
 
 COPY /SW-12.71/ /home/Project/ubuntu/security_world_12_71
 
-RUN security_world_12_71/install-sw.sh
+# RUN security_world_12_71/install-sw.sh
 
 # RUN ./install-sw.sh
 
