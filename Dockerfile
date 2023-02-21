@@ -1,4 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update && apt install nano unzip
+RUN apt-get update && \
+    apt-get install -y nano && \
+    apt-get install -y unzip
 
