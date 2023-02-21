@@ -13,6 +13,6 @@ COPY lib/bcprov-jdk15on-165.jar /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext
 
 # RUN security_world_12_71/install-sw.sh; exit 0
 
-RUN /bin/bash /home/Project/ubuntu/security_world_12_71/install-sw.sh; exit 0
+RUN /bin/bash /home/Project/ubuntu/security_world_12_71/install-sw.sh
 
 CMD ["/opt/nfast/sbin/install"]
