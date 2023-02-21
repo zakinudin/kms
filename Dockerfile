@@ -5,11 +5,11 @@ RUN apt-get update && \
     apt-get install -y unzip && \
     apt-get install -y openjdk-8-jre
 
-WORKDIR /home/Project/ubuntu
+# WORKDIR /home/Project/ubuntu
 
 COPY /SW-12.71/ /home/Project/ubuntu/security_world_12_71
 
-# RUN security_world_12_71/install-sw.sh
+RUN cd && /home/Project/ubuntu/security_world_12_71/install-sw.sh
 
 # RUN ./install-sw.sh
 
