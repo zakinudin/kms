@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
   webservice:
-    image: tte:1.3
-    container_name: tte-ubu1
+    image: tte:2.0
+    container_name: ubuntu-tte-01
     stdin_open: true
     tty: true
     # network_mode: "host"
@@ -12,22 +12,18 @@ services:
       - "1502:7501"
     working_dir: /home/Project/ubuntu
     volumes:
-      - .:/home/Project/ubuntu
-      - /opt/nfast/kmdata:/opt/nfast/kmdata
+      # - .:/home/Project/ubuntu
+      - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
       - /opt/nfast/sockets.hwsp:/opt/nfast/sockets
-      # - /opt/nfast:/opt/nfast:rw
-      # - /opt/nfast/kmdata:/opt/nfast/kmdata:rw
-      # - /opt/nfast/sockets.hwsp:/opt/nfast/sockets
-    # working_dir: ./
     build:
       context: ./
       dockerfile: Dockerfile
     # command: ["java", "-jar", "/kms7500.jar"]    
     networks:
-      - pdsi-tte
+      - pdsi-tte01
     
 networks:
-  pdsi-tte:
+  pdsi-tte01:
 
 # volumes:
 #   pdsi-volume:
