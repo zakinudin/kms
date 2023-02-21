@@ -7,5 +7,5 @@ RUN apt-get update && \
 
 # WORKDIR /home
 
-COPY /SW-12.71/ /home
+COPY /SW-12.71/ /home/Project/ubuntu/security_world_12_71
 
