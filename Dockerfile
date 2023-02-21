@@ -1,4 +1,4 @@
 FROM ubuntu:latest
 
-RUN apt update && apt install nano unzip openjdk-8-jre
+RUN apt update && apt install nano unzip
 
