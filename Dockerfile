@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y unzip && \
     apt-get install -y openjdk-8-jre
 
-WORKDIR /home
+# WORKDIR /home
 
-# COPY /home/hsm/SW-12.71/ /home
+COPY /SW-12.71/ /home
 
